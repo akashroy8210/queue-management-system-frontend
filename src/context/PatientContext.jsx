@@ -29,7 +29,7 @@ export const SocketProvider = ({ children }) => {
     useEffect(() => {
         const fetchQueueData = async () => {
             try {
-                const res = await api.get('/receptionist/dashboard');
+                const res = await api.get('/api/receptionist/dashboard');
                 const data = res.data;
                 const currentPat = data.queue.waitingPatients.find((patient) => patient.tokenNo === data.queue.currentTokenNo);
                 setCurrentTokenNo(data.queue.currentTokenNo);
