@@ -16,7 +16,7 @@ function CurrentPatient() {
 
   const handleCallNextPatient = async () => {
     try {
-      await api.get('/receptionist/next/patient');
+      await api.get('/api/receptionist/next/patient');
     } catch (err) {
       console.error('Error calling next patient:', err);
     }
