@@ -48,7 +48,7 @@ function ReceptionDashboard() {
         }
         setLoading(true)
         setError("")
-        const res=await api.post('/receptionist/add/patient', patientDetails)
+        const res=await api.post('/api/receptionist/add/patient', patientDetails)
         setPatientDetails({
           name: "",
           age: 0,
@@ -65,7 +65,7 @@ function ReceptionDashboard() {
 
   const handleCallNextPatient = async () => {
     try {
-      await api.get('/receptionist/next/patient')
+      await api.get('/api/receptionist/next/patient')
     } catch (err) {
       console.log(err)
     }
