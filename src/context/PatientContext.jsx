@@ -20,7 +20,7 @@ export const SocketProvider = ({ children }) => {
     });
 
     useEffect(() => {
-        const socketInstance = io("http://localhost:8081");
+        const socketInstance = io(import.meta.env.VITE_API_BASE_URL);
         setSocket(socketInstance);
 
         return () => socketInstance.disconnect();
