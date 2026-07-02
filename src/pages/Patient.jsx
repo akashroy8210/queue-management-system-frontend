@@ -39,7 +39,7 @@ function Patient() {
       setIsLoading(true);
       setFetchError("");
       try {
-        const res = await api.get(`/receptionist/patient/${patientId}`);
+        const res = await api.get(`/api/receptionist/patient/${patientId}`);
         if (res.data.success) {
           setLocalPatient(res.data.patient);
         } else {
